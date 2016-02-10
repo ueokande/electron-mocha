@@ -12,7 +12,7 @@ process.on('uncaughtException', function (err) {
 
 app.on('ready', function () {
   var win = new BrowserWindow({ height: 700, width: 1200 });
-  win.loadURL('file://' + __dirname + '/renderer/index.html');
+  win.loadURL('file://' + __dirname + '/index.html');
   ipc.on('mocha-done', function (event, code) {
     process.exit(code)
   });
